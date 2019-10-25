@@ -20,7 +20,9 @@ highlightGroups = [
         ('Normal', {'bg': background, 'fg': foreground}),
         ('_new', 'clear & override'),
         ('_clear', 'Constant'),
-        ('_new', 'statusline'),
+        ('_new', 'javaScript'),
+        ('_link', ('javaScriptValue', 'Constant')),
+        ('_new', 'statusline'), # keep statusline as the last item.
 ]
 
 with open(f'{name}.vim', 'w') as f:
@@ -33,6 +35,10 @@ with open(f'{name}.vim', 'w') as f:
 
         if name == '_clear':
             f.write('\n' + f'hi clear {group}')
+            continue
+
+        if name == '_link':
+            f.write('\n' + f'hi link {group[0]} {group[1]}')
             continue
 
         bg = group.get('bg', 'NONE')
