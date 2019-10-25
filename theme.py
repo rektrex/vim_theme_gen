@@ -16,7 +16,10 @@ red                 = '#e76d6d'
 accent              = '#ff6188'
 
 highlightGroups = [
+        ('_new', 'basic'),
         ('Normal', {'bg': background, 'fg': foreground}),
+        ('_new', 'clear & override'),
+        ('_clear', 'Constant'),
         ('_new', 'statusline'),
 ]
 
@@ -26,6 +29,10 @@ with open(f'{name}.vim', 'w') as f:
     for name, group in highlightGroups:
         if name == '_new':
             f.write('\n\n' + utils.addNewSection(group) + '\n')
+            continue
+
+        if name == '_clear':
+            f.write('\n' + f'hi clear {group}')
             continue
 
         bg = group.get('bg', 'NONE')
