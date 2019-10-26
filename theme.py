@@ -56,7 +56,7 @@ highlightGroups = [
         ('Question', {'fg': yellow}),
         ('Error', {'fg': red, 'gui': 'REVERSE'}),
         ('Ignore', {}),
-        ('EndOfBuffer', {'fg': foreground}),
+        ('EndOfBuffer', {'fg': background}),
         ('NonText', {'fg': red}),
         ('SpecialKey', {'fg': red, 'gui': 'UNDERCURL'}),
         ('Statusline', {'fg': foregroundFaded, 'gui': 'UNDERLINE'}),
