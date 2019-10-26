@@ -15,39 +15,35 @@ set background={background}
 
 
 statusline =\
-"""if g:micro_theme_statusline==1
-    set statusline=
-    set statusline+=\ %{StatuslineMode()}
-    set statusline+=%=
-    if g:micro_coc_status==1
-        set statusline+=%{coc#status()}\ 
-    endif
-    set statusline+=\ %t
-    set statusline+=%m
-    set statusline+=%r
-    set laststatus=2
+ """set statusline=
+set statusline+=\ %{StatuslineMode()}
+set statusline+=%=
+set statusline+=%{coc#status()}\ 
+set statusline+=\ %t
+set statusline+=%m
+set statusline+=%r
+set laststatus=2
 
-    function! StatuslineMode()
-        let l:mode=mode()
-        if l:mode==#"n"
-            return "NORMAL"
-        elseif l:mode==?"v"
-            return "VISUAL"
-        elseif l:mode==#"i"
-            return "INSERT"
-        elseif l:mode==#"R"
-            return "REPLACE"
-        elseif l:mode==?"s"
-            return "SELECT"
-        elseif l:mode==#"t"
-            return "TERMINAL"
-        elseif l:mode==#"c"
-            return "COMMAND"
-        elseif l:mode==#"!"
-            return "SHELL"
-        endif
-    endfunction
-endif
+function! StatuslineMode()
+    let l:mode=mode()
+    if l:mode==#"n"
+        return "NORMAL"
+    elseif l:mode==?"v"
+        return "VISUAL"
+    elseif l:mode==#"i"
+        return "INSERT"
+    elseif l:mode==#"R"
+        return "REPLACE"
+    elseif l:mode==?"s"
+        return "SELECT"
+    elseif l:mode==#"t"
+        return "TERMINAL"
+    elseif l:mode==#"c"
+        return "COMMAND"
+    elseif l:mode==#"!"
+        return "SHELL"
+    endif
+endfunction
 """
 
 
