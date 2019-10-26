@@ -60,6 +60,7 @@ highlightGroups = [
         ('NonText', {'fg': red}),
         ('SpecialKey', {'fg': red, 'gui': 'UNDERCURL'}),
         ('Statusline', {'fg': foregroundFaded, 'gui': 'UNDERLINE'}),
+        ('StatuslineNC', {'fg': foregroundFaded}),
 
         ('_new', 'clear & override'),
         ('_clear', 'Constant'),
