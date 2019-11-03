@@ -13,34 +13,57 @@ set background={background}
 
     return out
 
-
 statusline =\
- """set statusline=
-set statusline+=\ %{StatuslineMode()}
+"""hi link statuscolor NormalColor
+
+set statusline=
+set statusline+=%#statuscolor#
+set statusline+=\ %{StatuslineMode()}\ 
+set statusline+=%#Statusline#
 set statusline+=%=
-set statusline+=%{coc#status()}\ 
+set statusline+=%#cocstatuscolor#
+set statusline+=%{CocStatus()}
+set statusline+=%#statuscolor#
 set statusline+=\ %t
 set statusline+=%m
-set statusline+=%r
+set statusline+=%r\ 
+set statusline+=%#Statusline#
 set laststatus=2
+
+function! CocStatus()
+    let l:status=coc#status()
+    if strlen(trim(l:status)) == 0
+        return ""
+    else
+        return " " . l:status . " "
+    endif
+endfunction
 
 function! StatuslineMode()
     let l:mode=mode()
     if l:mode==#"n"
+        hi link statuscolor NormalColor
         return "NORMAL"
     elseif l:mode==?"v"
+        hi link statuscolor VisualColor
         return "VISUAL"
     elseif l:mode==#"i"
+        hi link statuscolor InsertColor
         return "INSERT"
     elseif l:mode==#"R"
+        hi link statuscolor ReplaceColor
         return "REPLACE"
     elseif l:mode==?"s"
+        hi link statuscolor VisualColor
         return "SELECT"
     elseif l:mode==#"t"
+        hi link statuscolor NormalColor
         return "TERMINAL"
     elseif l:mode==#"c"
+        hi link statuscolor NormalColor
         return "COMMAND"
     elseif l:mode==#"!"
+        hi link statuscolor NormalColor
         return "SHELL"
     endif
 endfunction
