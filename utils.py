@@ -21,23 +21,12 @@ set statusline+=%#statuscolor#
 set statusline+=\ %{StatuslineMode()}\ 
 set statusline+=%#Statusline#
 set statusline+=%=
-set statusline+=%#cocstatuscolor#
-set statusline+=%{CocStatus()}
 set statusline+=%#statuscolor#
 set statusline+=\ %t
 set statusline+=%m
 set statusline+=%r\ 
 set statusline+=%#Statusline#
 set laststatus=2
-
-function! CocStatus()
-    let l:status=coc#status()
-    if strlen(trim(l:status)) == 0
-        return ""
-    else
-        return " " . l:status . " "
-    endif
-endfunction
 
 function! StatuslineMode()
     let l:mode=mode()

@@ -65,7 +65,6 @@ highlightGroups = [
         ('InsertColor', {'bg': green, 'fg': background}),
         ('VisualColor', {'bg': foregroundFaded, 'fg': background}),
         ('ReplaceColor', {'bg': red, 'fg': background}),
-        ('CocStatusColor', {'bg': red, 'fg': background}),
 
         ('_new', 'clear & override'),
         ('_clear', 'Constant'),
@@ -77,12 +76,6 @@ highlightGroups = [
         ('_clear', 'Identifier'),
         ('Constant', {'fg': accent}),
         ('Tag', {'gui': 'UNDERLINE'}),
-
-        ('_new', 'coc.nvim'),
-        ('CocErrorSign', {'fg': red}),
-        ('CocWarningSign', {'fg': yellow}),
-        ('CocInfoSign', {'fg': yellow}),
-        ('CocHintSign', {'fg': yellow}),
 
         ('_new', 'Help'),
         ('helpHyperTextJump', {'gui': 'UNDERLINE'}),
