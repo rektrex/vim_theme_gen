@@ -91,7 +91,7 @@ highlightGroups = [
         ('_link', ('javaScriptNumber', 'javaScriptValue')),
         ('_link', ('javaScriptNull', 'javaScriptValue')),
 
-        ('_new', 'statusline'), # keep statusline as the last item.
+        # ('_new', 'statusline'), # keep statusline as the last item.
 ]
 
 with open(f'{name}.vim', 'w') as f:
@@ -116,4 +116,4 @@ with open(f'{name}.vim', 'w') as f:
 
         f.write('\n' + utils.setHighlight(name, bg, fg, gui))
 
-    f.write('\n' + utils.statusline)
+    # f.write('\n' + utils.statusline)
