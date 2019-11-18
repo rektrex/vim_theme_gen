@@ -31,7 +31,7 @@ highlightGroups = [
         ('Underlined', {'gui': 'UNDERLINE'}),
         ('Visual', {'bg': background, 'fg': foregroundFaded, 'gui': 'UNDERLINE'}),
         ('VisualNOS', {'gui': 'UNDERLINE'}),
-        ('MatchParen', {'gui': 'BOLD'}),
+        ('MatchParen', {'bg': accent, 'fg': background, 'gui': 'BOLD'}),
         ('IncSearch', {'bg': yellow, 'fg': background}),
         ('Search', {'bg': yellow, 'fg': background}),
         ('CursorColumn', {}),
