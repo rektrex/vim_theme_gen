@@ -13,7 +13,7 @@ yellow              = '#dfc56d'
 gray                = '#373737'
 green               = '#88c563'
 red                 = '#e76d6d'
-accent              = '#ff6188'
+accent              = '#83a598'
 
 highlightGroups = [
         ('_new', 'basic'),
@@ -43,9 +43,9 @@ highlightGroups = [
         ('DiffChange', {'fg': yellow}),
         ('DiffText', {'fg': yellow}),
         ('Pmenu', {'bg': gray, 'fg': foreground}),
-        ('PmenuSel', {'bg': yellow, 'fg': background}),
+        ('PmenuSel', {'bg': accent, 'fg': background}),
         ('PmenuSbar', {'bg': gray, 'fg': green}),
-        ('PmenuThumb', {'bg': foreground, 'fg': yellow}),
+        ('PmenuThumb', {'bg': foreground, 'fg': accent}),
         ('SpellBad', {'fg': red, 'gui': 'UNDERCURL'}),
         ('SpellCap', {'fg': yellow, 'gui': 'UNDERCURL'}),
         ('SpellLocal', {'fg': yellow, 'gui': 'UNDERCURL'}),
@@ -90,6 +90,8 @@ highlightGroups = [
         ('_link', ('javaScriptValue', 'Constant')),
         ('_link', ('javaScriptNumber', 'javaScriptValue')),
         ('_link', ('javaScriptNull', 'javaScriptValue')),
+
+        ('_link', ('QuickFixLine', 'PmenuSel')),
 
         # ('_new', 'statusline'), # keep statusline as the last item.
 ]
