@@ -93,6 +93,11 @@ highlightGroups = [
 
         ('_link', ('QuickFixLine', 'PmenuSel')),
 
+        ('_new', 'quick-scope'),
+        ('QuickScopePrimary', {'fg': green, 'gui': 'UNDERLINE'}),
+        ('QuickScopeSecondary', {'fg': yellow, 'gui': 'UNDERLINE'}),
+
+
         # ('_new', 'statusline'), # keep statusline as the last item.
 ]
 
