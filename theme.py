@@ -65,6 +65,7 @@ highlightGroups = [
         # ('InsertColor', {'bg': green, 'fg': background}),
         # ('VisualColor', {'bg': foregroundFaded, 'fg': background}),
         # ('ReplaceColor', {'bg': red, 'fg': background}),
+        ('_link', ('QuickFixLine', 'PmenuSel')),
 
         ('_new', 'clear & override'),
         ('_clear', 'Constant'),
@@ -86,12 +87,13 @@ highlightGroups = [
         ('_new', 'vimscript'),
         ('_link', ('vimUserFunc', 'Function')),
 
+        ('_new', 'xdefaults'),
+        ('_link', ('xdefaultsPunct', 'xdefaultsLabel')),
+
         ('_new', 'javaScript'),
         ('_link', ('javaScriptValue', 'Constant')),
         ('_link', ('javaScriptNumber', 'javaScriptValue')),
         ('_link', ('javaScriptNull', 'javaScriptValue')),
-
-        ('_link', ('QuickFixLine', 'PmenuSel')),
 
         ('_new', 'quick-scope'),
         ('QuickScopePrimary', {'fg': green, 'gui': 'UNDERLINE'}),
